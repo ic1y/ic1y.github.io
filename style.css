@@ -9,7 +9,6 @@ html{
 	color: #f0f0f0;
 	scrollbar-width: thin;
 	color-scheme: dark;
-	font-style: 10px;
 	font-family: Verdana,sans-serif;
 }
 header{
@@ -17,14 +16,21 @@ header{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 24px;
+	padding: 12px 0;
+	margin-top: 12px;
 }
 h1{
-	margin: 10px;
-	font-style: 1.6rem;
+	margin: 0;
 	font-weight: 400;
 }
+hr{
+	border-top: 1px solid #f0f0f0;
+}
+header>h1{
+	font-size: 18px;
+}
 nav{
+	padding: 6px 12px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -32,7 +38,7 @@ nav{
 	justify-content: center;
 }
 nav>a{
-	font-size: 1.2rem;
+	font-size: 16px;
 	color: #f0f0f0;
 	background-color: #0f0f0f;
 	padding: 6px 12px;
@@ -40,8 +46,62 @@ nav>a{
 	border: 1px solid #f0f0f0;
 	text-decoration: none;
 }
-nav>a:hover{
+nav>a:hover,nav>a:focus{
 	color: #0f0f0f;
 	background-color: #f0f0f0;
-	transition: 0.25s;
+	transition: all 0.25s ease-out;
+}
+main{
+	padding: 6px 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+main>h1,main>p{
+	margin: 6px 0;
+}
+main>h1{
+	font-size: 24px;
+}
+main>p{
+	font-size: 14px;
+	max-width: 640px;
+	text-align: center;
+}
+.bgpfp {
+	background-image: url('./megumin.webp');
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	margin: 12px 0;
+}
+@media (prefers-color-scheme: light) {
+	html {
+		background-color: #f0f0f0;
+		color: #0f0f0f;
+		color-scheme: light;
+	}
+	nav>a{
+		background-color: #f0f0f0;
+		color: #0f0f0f;
+		border-color: #0f0f0f;
+	}
+	nav>a:hover,nav>a:focus{
+		color: #f0f0f0;
+		background-color: #0f0f0f;
+	}
+}
+@media (orientation:portrait) {
+	.bgpfp {
+		height: 25vw;
+		width: 25vw;
+	}
+}
+@media (orientation:landscape) {
+	.bgpfp {
+		height: 25vh;
+		width: 25vh;
+	}
 }

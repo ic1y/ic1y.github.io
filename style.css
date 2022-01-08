@@ -12,37 +12,35 @@ html{
 	font-family: Verdana,sans-serif;
 }
 header{
+	position: fixed;
+	top: 24px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	padding: 12px 0;
-	margin-top: 12px;
+	align-items: center;
 }
 h1{
 	margin: 0;
 	font-weight: 400;
+	font-size: 20px;
 }
-hr{
-	border-top: 1px solid #f0f0f0;
-}
-header>h1{
-	font-size: 18px;
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 nav{
-	padding: 6px 12px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
 nav>a{
-	font-size: 16px;
+	font-size: 20px;
 	color: #f0f0f0;
 	background-color: #0f0f0f;
 	padding: 6px 12px;
-	margin: 6px;
+	margin: 6px 0;
 	border: 1px solid #f0f0f0;
 	text-decoration: none;
 }
@@ -51,31 +49,9 @@ nav>a:hover,nav>a:focus{
 	background-color: #f0f0f0;
 	transition: all 0.25s ease-out;
 }
-main{
-	padding: 6px 12px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-main>h1,main>p{
-	margin: 6px 0;
-}
-main>h1{
-	font-size: 24px;
-}
-main>p{
-	font-size: 14px;
-	max-width: 640px;
-	text-align: center;
-}
-.bgpfp {
-	background-image: url('./megumin.webp');
-	background-size: cover;
-	background-position: top center;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-	margin: 12px 0;
+::selection {
+	background-color: #f0f0f0;
+	color: #0f0f0f;
 }
 @media (prefers-color-scheme: light) {
 	html {
@@ -92,16 +68,8 @@ main>p{
 		color: #f0f0f0;
 		background-color: #0f0f0f;
 	}
-}
-@media (orientation:portrait) {
-	.bgpfp {
-		height: 25vw;
-		width: 25vw;
-	}
-}
-@media (orientation:landscape) {
-	.bgpfp {
-		height: 25vh;
-		width: 25vh;
+	::selection {
+		color: #f0f0f0;
+		background-color: #0f0f0f;
 	}
 }

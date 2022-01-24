@@ -18,6 +18,10 @@
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			background-color: #fff;
+			-webkit-user-drag: none;
+			-webkit-touch-callout: none;
+			height: 100%;
+			width: 100%;
 		}
 		body{
 			display: flex;
@@ -41,7 +45,7 @@
 				-webkit-transform: rotate(360deg);
 				transform: rotate(360deg);
 			}
-			}
+		}
 		@keyframes rotating {
 			from {
 				-ms-transform: rotate(0deg);
@@ -66,7 +70,10 @@
 		}
 	</style>
 </head>
-<body draggable="false">
-	<img src="./icebear.webp" alt="" class="aisubea">
+<body>
+	<img src="./icebear.webp" alt="spinning cartoon character Ice Bear" class="aisubea">
+	<script>
+		document.body.addEventListener('contextmenu', (e) => {e.preventDefault();})
+	</script>
 </body>
 </html>

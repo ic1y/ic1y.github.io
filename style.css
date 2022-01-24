@@ -44,11 +44,13 @@ nav>a{
 	margin: 6px 0;
 	border: 1px solid #f0f0f0;
 	text-decoration: none;
+	outline: none;
 }
 nav>a:hover,nav>a:focus{
 	color: #0f0f0f;
 	background-color: #f0f0f0;
 	transition: all 0.25s ease-out;
+	outline: none;
 }
 ::selection {
 	background-color: #f0f0f0;

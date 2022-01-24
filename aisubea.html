@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="referrer" content="no-referrer">
 	<meta name="description" content="Something random Ice has created.">
+	<meta name="robots" content="noindex">
 	<title>Something random</title>
 	<link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" type="image/x-icon">
 	<style>
@@ -31,32 +32,16 @@
 		.aisubea {
 			max-height: 100vh;
 			max-width: 100vw;
-			-webkit-animation: rotating 1.25s linear infinite;
-			-moz-animation: rotating 1.25s linear infinite;
-			-ms-animation: rotating 1.25s linear infinite;
-			animation: rotating 1.25s linear infinite;
+			animation: rotating linear infinite;
 		}
-		@-webkit-keyframes rotating /* Safari and Chrome */ {
-			from {
-				-webkit-transform: rotate(0deg);
-				transform: rotate(0deg);
-			}
-			to {
-				-webkit-transform: rotate(360deg);
-				transform: rotate(360deg);
-			}
+		.aisubea:focus {
+			outline: none;
 		}
 		@keyframes rotating {
 			from {
-				-ms-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-webkit-transform: rotate(0deg);
 				transform: rotate(0deg);
 			}
 			to {
-				-ms-transform: rotate(360deg);
-				-moz-transform: rotate(360deg);
-				-webkit-transform: rotate(360deg);
 				transform: rotate(360deg);
 			}
 		}
@@ -71,9 +56,17 @@
 	</style>
 </head>
 <body>
-	<img src="./icebear.webp" alt="spinning cartoon character Ice Bear" class="aisubea">
+	<img src="./icebear.webp" alt="spinning cartoon character Ice Bear" class="aisubea" style="animation-duration: 8s;" tabindex="1">
 	<script>
 		document.body.addEventListener('contextmenu', (e) => {e.preventDefault();})
+		const aisubea = document.getElementsByClassName('aisubea')[0];
+		function aisufaster() {
+			aisubea.style.animationDuration = (aisubea.style.animationDuration.substring(0,aisubea.style.animationDuration.indexOf('s'))/2)+'s';
+		}
+		aisubea.addEventListener('click', () => {aisufaster()})
+		aisubea.addEventListener('keydown', (e) => {
+			if(e.key == ' ' || e.key == 'Enter') {aisufaster();}
+		})
 	</script>
 </body>
 </html>

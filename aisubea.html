@@ -59,14 +59,16 @@
 	<img src="./icebear.webp" alt="spinning cartoon character Ice Bear" class="aisubea" style="animation-duration: 8s;" tabindex="1">
 	<script>
 		document.body.addEventListener('contextmenu', (e) => {e.preventDefault();})
+		document.body.addEventListener('dragstart', (e) => {e.preventDefault();})
 		const aisubea = document.getElementsByClassName('aisubea')[0];
 		function aisufaster() {
-			aisubea.style.animationDuration = (aisubea.style.animationDuration.substring(0,aisubea.style.animationDuration.indexOf('s'))/2)+'s';
+			aisubea.style.animationDuration = (aisubea.style.animationDuration.slice(0,1)/2)+'s';
 		}
 		aisubea.addEventListener('click', () => {aisufaster()})
-		aisubea.addEventListener('keydown', (e) => {
+		document.addEventListener('keydown', (e) => {
 			if(e.key == ' ' || e.key == 'Enter') {aisufaster();}
 		})
+
 	</script>
 </body>
 </html>

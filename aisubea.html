@@ -21,8 +21,8 @@
 			background-color: #fff;
 			-webkit-user-drag: none;
 			-webkit-touch-callout: none;
-			height: 100%;
-			width: 100%;
+			height: 100vh;
+			width: 100vw;
 		}
 		body{
 			display: flex;
@@ -37,7 +37,7 @@
 			-ms-animation: rotating 2s linear infinite;
 			animation: rotating 2s linear infinite;
 		}
-		@-webkit-keyframes rotating /* Safari and Chrome */ {
+		@-webkit-keyframes rotating {
 			from {
 				-webkit-transform: rotate(0deg);
 				transform: rotate(0deg);
@@ -73,9 +73,5 @@
 </head>
 <body>
 	<img src="./icebear.webp" alt="spinning cartoon character Ice Bear" class="aisubea">
-	<script>
-		document.body.addEventListener('contextmenu', (e) => {e.preventDefault();})
-		document.body.addEventListener('dragstart', (e) => {e.preventDefault();})
-	</script>
 </body>
 </html>

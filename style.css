@@ -19,12 +19,11 @@ html{
 	-webkit-text-size-adjust: 100%;
 }
 header{
-	position: fixed;
-	top: 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 2;
+	margin-bottom: 18px;
+	z-index: 1;
 }
 h1{
 	margin: 0;
@@ -35,28 +34,27 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 body::before{
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(./polarbear.webp);
+	background-image: url(./arcticfox.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center center;
 	position: absolute;
-	z-index: 1;
 	filter: brightness(0.5);
 	content: "";
 }
 nav{
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	z-index: 3;
+	z-index: 2;
 }
 nav>a{
 	font-size: 18px;
@@ -77,9 +75,4 @@ nav>a:hover,nav>a:focus{
 	background-color: rgba(255,255,255,1);
 	transition: all 0.25s linear;
 	outline: none;
-}
-@media (orientation: portrait) {
-	body::before{
-		background-image: url('./arcticfox.webp');
-	}
 }

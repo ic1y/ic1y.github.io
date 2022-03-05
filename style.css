@@ -17,12 +17,14 @@ html{
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	-webkit-text-size-adjust: 100%;
+	touch-action: manipulation;
+	-ms-touch-action: manipulation;
 }
 header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 18px;
+	margin: 6px 0;
 	z-index: 1;
 }
 h1{
@@ -55,11 +57,12 @@ nav{
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
+	margin: 6px 0;
 }
 nav>a{
 	font-size: 18px;
 	color: #fff;
-	background-color: rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0.25);
 	padding: 6px 12px;
 	margin: 6px 0;
 	border: 1px solid #fff;

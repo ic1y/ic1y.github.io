@@ -18,6 +18,8 @@ html{
 	line-height: 1.15;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 	-webkit-text-size-adjust: 100%;
+}
+html.arcticfox {
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./arcticfox.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -42,7 +44,7 @@ nav>a{
 	margin: 8px 0;
 	border: 1px solid #fff;
 	text-decoration: none;
-	min-width: 256px;
+	min-width: 192px;
 }
 nav>a:hover,nav>a:focus{
 	background-color: rgba(0,0,0,0.5);
